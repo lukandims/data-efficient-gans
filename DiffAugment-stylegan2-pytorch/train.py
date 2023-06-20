@@ -235,7 +235,7 @@ def setup_training_loop_kwargs(
         diffaugment = 'color,translation,cutout'
 
     if diffaugment:
-        args.loss_kwargs.diffaugment = diffaugment'
+        args.loss_kwargs.diffaugment = diffaugment
         desc += '-{}'.format(diffaugment.replace(',', '-'))
     
     if aug is None:
