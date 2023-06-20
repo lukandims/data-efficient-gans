@@ -235,10 +235,10 @@ def setup_training_loop_kwargs(
         diffaugment = 'color,translation,cutout'
 
     if diffaugment:
-        args.loss_kwargs.diffaugment = diffaugment
-        aug = 'noaug'
+        args.loss_kwargs.diffaugment = diffaugment'
         desc += '-{}'.format(diffaugment.replace(',', '-'))
-    elif aug is None:
+    
+    if aug is None:
         aug = 'ada'
     else:
         assert isinstance(aug, str)
